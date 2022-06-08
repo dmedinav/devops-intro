@@ -48,4 +48,12 @@ services:
     depends_on:     
       - billingapp-back
     ports:
-      - 80:80 
+      - 80:80
+    deploy:
+        resources:
+           limits:
+              cpus: "0.15"
+              memory: 250M
+           reservations:
+              cpus: "0.1"
+              memory: 128M
